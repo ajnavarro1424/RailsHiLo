@@ -1,0 +1,57 @@
+Variables we need to take in: randRow, randCol, randDirection shipType, numOfShips
+//Checks the entire ship length before placing values in the array.
+//Algorithm can recover from out-of-bounds and ship conflict failures.
+//Use as many ship dependent variables as possible.
+//Ship direction will start as random number, then increment up to a high bound, then reset at 0
+
+//Loop for number of ships
+for(var i = 1; i <= numOfShips; i++){
+  //Reset randRow & randCol, randDir if all directions fail search
+  var randRow = ...;
+  var randCol = ...;
+  var randDir = ...;
+  //Checks the initial position
+  if(initialShipCheck() == false || dirShipCheck() == false){
+    i--//reset the randRow and randCol
+  }
+  else{
+    placeShip();
+  }
+
+
+
+
+
+
+//Check to make sure the start coordinate is valid
+function initialShipCheck{return true or false}
+
+
+
+
+  //Loop iterating through all directions if necessary
+  function dirShipCheck(){
+    for(var i = 1; i<=4; i++){
+      //Loop for a searching for other ship conflicts or bounds
+      for(length of the ship)
+        if(there is a ship around the current position)
+          break;
+        else if (it's the last position on the ship)
+          return true;
+      }
+      if(randDir==3)
+          randDir=0;
+      else
+        randDir++;
+    }
+      return false;
+  }
+
+
+//Loop through cleared searched positions and place ship
+function placeShip(randRow, randCol, randDir, randLength){
+  if(runs separate for loops given direction)
+    for(..;<=randLength)
+      board[row]][col]
+  else(another dir)
+}
