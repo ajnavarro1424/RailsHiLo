@@ -6,10 +6,17 @@
   </head>
   <body>
       <h1>This is a HI/LO Game</h1>
+      <h2>Please enter a username and guess<h2>
+        <form  action="game" method="get">
+          <input type="text" name="username" placeholder="Username">
+          <input type="number" name="guess" placeholder="#" min="1" max="100" required>
+          <input type="submit" value="Submit">
+        </form>
+      <%= flash[:alert].html_safe unless flash[:alert].blank? %>
       <h2>Current Player: <%=@player%></h2>
       <h2>User Guess: <%=@guess%></h2>
       <h2>Response: <%=@response%></h2>
-      <h2>Past Guesses: <%=@guess_counter%></h2>
+      <h2>Past Guesses: <%=@guess_counter.join ", "%></h2>
       <h2>Guess Counter: <%=@guess_counter.length%></h2>
   </body>
 </html>
